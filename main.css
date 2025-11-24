@@ -1,0 +1,10 @@
+body {font-family: "Times New Roman", Times, serif;}
+p {font-size: 12px;}
+p:first-letter{text-transform: capitalize;}
+code{background:cyan;
+border-radius: 6px;
+color:blue;
+display:block;
+font: 14px/24px "source code pro",inconsolata;
+padding: 24px 15px;
+text-align: center;}
