@@ -3,8 +3,12 @@ p {font-size: 12px;}
 p:first-letter{text-transform: capitalize;}
 code{background:cyan;
 border-radius: 6px;
-color:blue;
+color:rgb(12, 12, 122);
 display:block;
 font: 14px/24px "source code pro",inconsolata;
 padding: 24px 15px;
 text-align: center;}
+body {
+    background-color: #05314f;
+    color: antiquewhite;
+}
