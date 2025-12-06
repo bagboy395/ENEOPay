@@ -1,3 +1,21 @@
 img{float: right;
-    margin: 0 2.5%;
-width: 40%;}
+    margin: 0 15%;
+width: 40%;
+border-radius: 20%;}
+.main_form{
+    margin: 0 20em;
+    display: flex;
+    width: 40em;
+}
+.forminfo{
+    width: 16em;
+    flex-direction: column;
+}
+label{
+    width: 16em;
+}
+input,textarea{
+    width: 20em;
+    border-radius: 10em;
+
+}
