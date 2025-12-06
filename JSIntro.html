@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jsinto.css">
+    <title>JSIntro</title>
+
+    <style>
+     
+    </style>
+   
+</head>
+
+<body>
+
+<ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Home</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Profile</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Contact</button>
+  </li>
+</ul>
+
+    <button onclick="alert('hello')" style="background-color: green;color: white;">
+        Click Me!</button>
+        
+
+
+
+
+
+
+
+    <div class="Mainform">
+        <div class="form-info">
+
+            <h3 style="background-color: rgb(147, 246, 147);width: 13em;text-align: center;
+            border-radius: 12px;">INCOME</h1>
+
+                <input type="text" id="income" name="income" oninput="calculate()" value="0">
+                <hr>
+                <h1 style="background-color: green;width: 13em;text-align: center;color: white;
+            border-radius: 12px;">EXPENSES</h1>
+                <p id="msg1"></p>
+                <label for="Rent">Rent </label>
+                <input type="text" id="rent" name="rent" oninput="calculate()" value="0">
+                <label for="feeding">feeding </label>
+                <input type="text" id="feeding" name="feeding" oninput="calculate()" value="0">
+                <label for="transport">Transport </label>
+                <input type="text" id="transport" name="transport" oninput="calculate()" value="0">
+                <label for="bills">Bills </label>
+                <input type="text" id="bills" name="bills" oninput="calculate()" value="0">
+                <label for="clothing">Clothing </label>
+                <input type="text" id="clothing" name="clothing" oninput="calculate()" value="0">
+                <label for="enjoyment">Enjoyment </label>
+                <input type="text" id="enjoyment" name="enjoyment" oninput="calculate()" value="0">
+                <label for="parents">Parents </label>
+                <input type="text" id="parents" name="parents" oninput="calculate()" value="0">
+                <label for="data">Data </label>
+                <input type="text" id="data" name="data" oninput="calculate()" value="0">
+                <label for="social">Social </label>
+                <input type="text" id="social" name="social" oninput="calculate()" value="0">
+                <label for="tax">Tax </label>
+                <input type="text" id="tax" name="tax" oninput="calculate()" value="0">
+
+        </div>
+    </div>
+
+    <section>
+        <label for="texpense"> TOTAL EXPENSES</label><br>
+
+        <input type="text" id="texpense" readonly="true">
+    </section>
+    <hr>
+
+
+    <label for="tbalance"> TOTAL BALANCE</label><br>
+
+    <input type="text" id="tbalance" readonly="true">
+    <hr>
+
+    <section>
+        <h2 style="background-color: green;width: 13em;text-align: center;margin-left:25em;
+            color:white;border-radius: 12px;">
+            Personal Details </h2>
+        <label for="FName">First Names:</label>
+        <input type="text" id="fname" name="fname" required onchange="message()" />
+        <label for="Lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required onchange="message()"/>
+        <select name="title" id="title">
+            <option value="Mr">Mr</option>
+            <option value="Mrs">Mrs</option>
+            <option value="Miss">Miss</option>
+        </select><br><br>
+        <label for="Address">Address:</label>
+        <textarea rows="4" cols="6" id="address" name="address"></textarea>
+        <label for="Phone" style="margin-bottom: 60em;">Phone number:</label>
+        <input type="number" id="phone" name="phone" />
+
+
+
+    </section>
+
+    <script>
+        function calculate() {
+            var rent = document.getElementById("rent").value;
+            var feeding = document.getElementById("feeding").value;
+            var transport = document.getElementById("transport").value;
+            var bills = document.getElementById("bills").value;
+            var clothing = document.getElementById("clothing").value;
+            var enjoyment = document.getElementById("enjoyment").value;
+            var parents = document.getElementById("parents").value;
+            var data = document.getElementById("data").value;
+            var social = document.getElementById("social").value;
+            var tax = document.getElementById("tax").value;
+            var income = document.getElementById("income").value;
+            var total_expense = parseInt(rent) + parseInt(feeding) + parseInt(transport) + parseInt(bills)
+                + parseInt(clothing) + parseInt(enjoyment) + parseInt(parents) + parseInt(data)
+                + parseInt(social) + parseInt(tax);
+            var total_balance = parseInt(income) - parseInt(total_expense);
+
+            console.log("Total Expense is:" + total_expense);
+            document.getElementById("texpense").value = total_expense;
+            document.getElementById("tbalance").value = total_balance;
+        }
+        function message(){
+            var firstname = document.getElementById("fname").value;
+            var lastname = document.getElementById("lname").value;
+            var income = document.getElementById("income").value;
+            var total_expense = document.getElementById("texpense").value;
+            var balance = document.getElementById("tbalance").value;
+            var title = document.getElementById("title").value;
+
+            var textmsg = "Hello " + title + " " + firstname + " " + lastname + ", You earned " + income + " CFA, and spent " 
+            + total_expense +" CFA, your savings is "+balance+". Thank you and see you next month";
+
+            document.getElementById("msg1").innerHTML=textmsg;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

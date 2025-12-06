@@ -1,2 +1,22 @@
-ul{color: red;}
-h5{color: cyan;}
+ul{color: red;
+list-style-type:square;
+outline:solid rgb(18, 115, 171) 1.5em;
+background:rgb(18, 115, 171) ;
+
+}
+
+ul li{
+    background-color:cyan ;
+    margin: 5px;
+    
+
+}
+h5{color:black;
+    background-color:rgb(18, 115, 171)  ;
+  outline:solid rgb(18, 115, 171) 1.5em;
+}
+h3{
+    color: black;
+    background-color:rgb(18, 115, 171)  ;
+    
+}

@@ -1,60 +1,76 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title> Register </title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="register.css">
+    <STYLe>
+        button{
+            background-color: cyan;
+            width: 5em;
+            margin: 0 8em;
+            border-radius: 20em;
+            margin-top:0.9;
+            
+        }
+        footer{
+            text-align: center;
+        }
+        h3{
+            border-style: outset;
+            border-width: 5px;
+            border-color: #05314f #05314f #05314f #05314f;
+          
+
+            
+        }
+        button{
+              border-style: outset;
+            border-width: 5px;
+            border-color: cyan;
+            border-radius: 12em;
+            font-family:Georgia, Times, 'Times New Roman', serif;
+        }
+  </STYLe>
 </head>
+
 <body>
-    <header> 
-       <code> <h1>REGISTERATION</h1> </code>
-       <code> <h3 style="font-style: italic;">Become A Participant Today!</h3> </code>
+    <header>
+        <code> <h1>REGISTERATION</h1> </code>
+         <h3 style="font-style: italic;margin-left: 30em;width: 18em;text-align: center;">
+            Become A Participant Today!</h3>
     </header>
     <p>Looking to participate in this event? fill in the information below;</p>
 
-<hr> 
-<img src="Assets/Images/participate-logo.png" alt="participate-logo">
-<form>
-    <p>
-<div>
-    <label for="name"> Your Name:</label>
-    <input type="text" id="name" name="Full Names" required><br><br>
+    <hr>
 
-</div></p>
-<p>
-<div>
-    <label for="name"> Email:</label>
-    <input type="text" id="email" name="Email Address" required><br><br>
+    <div class="main_form">
+        <div class="forminfo">
+            <label for="name"> Your Name:</label>
+            <input type="text" id="name" name="Full Names" required><br><br>
 
-</div></p>
-<p>
-<div>
-    <label for="Phone"> Phone:</label>
-    <input type="text" id="Phone" name="Phone Contact" required> <br><br>
+            <label for="name"> Email:</label>
+            <input type="text" id="email" name="Email Address" required><br><br>
 
-</div></p>
-<p>
-<div>
-    <label for="Address">Address:</label>
-    <input type="text" id="Address" name="Address" required><br><br>
+            <label for="Phone"> Phone:</label>
+            <input type="text" id="Phone" name="Phone Contact" required> <br><br>
 
-</div></p>
-<br><Br><BR>
+            <label for="Address">Address:</label>
+            <input type="text" id="Address" name="Address" required><br><br>
 
-<code><h4>Upload Passport Photo:</h4></code>
-<label for="image_file"> Choose An Image To Upload:</label><br>
-<input type="file" id="image_file" name="image" aaccept="image/*" required>
-<br><br>
+             <button type="submit"> Submit </button>
+        </div>
+        <img src="Assets/Images/participate-logo.png" alt="participate-logo">
+    </div>
 
-    <button type="submit"> Submit Registration </button>
-</form>
+    <h4>Upload Passport Photo:</h4>
+    <label for="image_file"> Choose An Image To Upload:</label><br>
+    <input type="file" id="image_file" name="image" aaccept="image/*" required>
 
-
-
-
-<footer> <small>&copy;2025 DANIEL IT Conference. All Rights Reserved. Terms and 
-    Conditions Applied</small></footer>
+    <footer> <small>&copy;2025 DANIEL IT Conference. All Rights Reserved. Terms and
+            Conditions Applied</small></footer>
 </body>
 
 
